@@ -1,7 +1,5 @@
 include(default)
 
-[build_requires]
-
 [settings]
 compiler.cppstd=17
 {% if compiler == 'gcc' %}compiler.libcxx=libstdc++11
@@ -9,7 +7,5 @@ compiler.cppstd=17
 {% elif compiler == 'Visual Studio' %}compiler.toolset=v143
 {% endif %}
 [options]
-
-[env]
 
 [conf]

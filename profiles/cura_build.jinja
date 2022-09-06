@@ -11,11 +11,5 @@ compiler.cppstd=17
 [options]
 
 [env]
-{% if platform.system() == 'Windows' %}# FIXME: automake and autoconf don't play nice with msys2, so we need to use the local WSL Bash. The're also not fully modernized yet and depend on the CONAN_BASH_PATH instead of the `subsystem` configuration
-automake:CONAN_BASH_PATH=bash.exe
-autoconf:CONAN_BASH_PATH=bash.exe{% endif %}
 
 [conf]
-{% if platform.system() == 'Windows' %}# FIXME: automake and autoconf don't play nice with msys2, so we need to use the local WSL Bash
-tools.microsoft.bash:subsystem = wsl
-tools.microsoft.bash:path = bash.exe{% endif %}
